@@ -17,7 +17,7 @@ public class PartitaTest {
 		this.partita = new Partita();
 		this.stanzaTest = new Stanza("stanzaTest");
 	}
-
+	
 	@Test
 	public void testStanzaVincente_PartitaVinta() {
 		this.stanzaTest = this.partita.getLabirinto().getStanzaFinale();

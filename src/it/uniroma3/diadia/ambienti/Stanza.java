@@ -60,7 +60,6 @@ public class Stanza {
     		    this.numeroStanzeAdiacenti++;
     		}
     }
-
     /**
      * Restituisce la stanza adiacente nella direzione specificata
      * @param direzione
@@ -88,7 +87,6 @@ public class Stanza {
     public String getDescrizione() {
         return this.toString();
     }
-
     /**
      * Restituisce la collezione di attrezzi presenti nella stanza.
      * @return la collezione di attrezzi nella stanza.

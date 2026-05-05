@@ -19,4 +19,7 @@ public class Giocatore {
 	public Borsa getBorsa() {
 		return borsa;
 	}
+	public boolean isVivo() {
+		return this.cfu > 0;
+	}
 }

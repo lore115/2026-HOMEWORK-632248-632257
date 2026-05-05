@@ -29,5 +29,14 @@ public class GiocatoreTest {
 	public void testOgniGiocatoreHaunaBorsa() {
 		assertNotNull(this.giocatore.getBorsa());
 	}
-
+	@Test
+	public void testGiocatoreIsVivo() {
+		this.giocatore.setCfu(5);
+		assertTrue(this.giocatore.isVivo());
+	}
+	@Test
+	public void testGiocatoreMorto() {
+		this.giocatore.setCfu(-1);
+		assertFalse(this.giocatore.isVivo());
+	}
 }

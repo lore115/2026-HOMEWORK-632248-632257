@@ -39,7 +39,7 @@ public class Partita {
 		return this.stanzaCorrente;
 	}
 	
-	/**
+/**
 	 * Restituisce vero se e solo se la partita e' stata vinta
 	 * @return vero se partita vinta
 	 */
@@ -68,6 +68,11 @@ public class Partita {
 	
 	public Labirinto getLabirinto() {
 		return labirinto;
+	}
+
+
+	public boolean giocatoreIsVivo() {
+		return this.giocatore.isVivo();
 	}
 	
 }

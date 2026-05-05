@@ -14,13 +14,16 @@ public class Labirinto {
 		/* crea gli attrezzi */
     	Attrezzo lanterna = new Attrezzo("lanterna",3);
 		Attrezzo osso = new Attrezzo("osso",1);
+		Attrezzo chiave = new Attrezzo("chiave",1);
+		Attrezzo kikoku = new Attrezzo("kikoku",1); //Kikoku: Katana tratta da una serie giapponese di pirati.
     	
 		/* crea stanze del labirinto */
 		Stanza atrio = new Stanza("Atrio");
 		Stanza aulaN11 = new Stanza("Aula N11");
 		Stanza aulaN10 = new Stanza("Aula N10");
-		Stanza laboratorio = new Stanza("Laboratorio Campus");
+		Stanza laboratorio = new StanzaBloccata("Laboratorio Campus","nord","chiave");
 		Stanza biblioteca = new Stanza("Biblioteca");
+		Stanza segreta = new StanzaBuia("Cantina","lanterna");
 		
 		/* collega le stanze */
 		atrio.impostaStanzaAdiacente("nord", biblioteca);
@@ -34,11 +37,15 @@ public class Labirinto {
 		aulaN10.impostaStanzaAdiacente("ovest", laboratorio);
 		laboratorio.impostaStanzaAdiacente("est", atrio);
 		laboratorio.impostaStanzaAdiacente("ovest", aulaN11);
+		laboratorio.impostaStanzaAdiacente("nord", segreta);
+		segreta.impostaStanzaAdiacente("sud", laboratorio);
 		biblioteca.impostaStanzaAdiacente("sud", atrio);
-
+		
         /* pone gli attrezzi nelle stanze */
 		aulaN10.addAttrezzo(lanterna);
 		atrio.addAttrezzo(osso);
+		aulaN11.addAttrezzo(chiave);
+		segreta.addAttrezzo(kikoku);
 		
 		this.stanzaInziale = atrio;
 		this.stanzaFinale = biblioteca;

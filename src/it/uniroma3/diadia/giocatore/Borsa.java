@@ -11,7 +11,7 @@ public class Borsa {
 	private Attrezzo[] attrezzi;
 	private int numeroAttrezzi;
 	private int pesoMax;
-
+	
 	public Borsa() {
 		this(DEFAULT_PESO_MAX_BORSA);
 	}
